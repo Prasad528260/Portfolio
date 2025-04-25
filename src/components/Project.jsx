@@ -14,7 +14,7 @@ const Project = () => {
       techStack: ["HTML", "CSS", "JavaScript", "Firebase"],
       image: cookbookImage, // Use imported image
       demoLink: "https://speedotype04052005.web.app/",
-      repoLink: "https://github.com//project1",
+      repoLink: "https://github.com/Prasad528260/Portfolio",
       accentColor: "#FF9E5E" // Orange accent
     },
     {
@@ -33,8 +33,8 @@ const Project = () => {
         "A platform where you can book stay locations",
       techStack: ["ejs", "JavaScript", "tailwind", "Express js"],
       image: speedoTypeImage, // Update this with your airbnb image import
-      demoLink: "https://speedotype04052005.web.app/",
-      repoLink: "https://github.com/yourusername/project2",
+      demoLink: "https://airbnb-5idb.onrender.com ",
+      repoLink: "https://github.com/Prasad528260/AirBnB",
       accentColor: "#34D399 " // Blue accent
     },
   ];
