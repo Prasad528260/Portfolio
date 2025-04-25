@@ -24,7 +24,7 @@ const Project = () => {
       techStack: ["React", "JavaScript", "CSS", "Framer Motion"],
       image: speedoTypeImage, // Use imported image
       demoLink: "https://speedotype04052005.web.app/",
-      repoLink: "https://github.com/yourusername/project2",
+      repoLink: "https://github.com/Prasad528260/speedotype",
       accentColor: "#5E8BFF" // Blue accent
     },
     {
