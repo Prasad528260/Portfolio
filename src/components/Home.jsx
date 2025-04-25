@@ -130,7 +130,7 @@ function Home() {
               <p>Explore my problem-solving journey </p>
               <div className="stats"></div>
               <a
-                href="https://leetcode.com/yourusername"
+                href="https://leetcode.com/prasad_subhedar_054"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -168,7 +168,7 @@ function Home() {
               <p>Check out my open-source projects and contributions.</p>
               <div className="stats"></div>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/Prasad528260"
                 target="_blank"
                 rel="noopener noreferrer"
               >
