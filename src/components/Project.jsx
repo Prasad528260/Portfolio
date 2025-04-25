@@ -1,5 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./project.css";
+// Import images directly
+import cookbookImage from "../assets/images/Screenshot 2024-12-29 131047.png";
+import speedoTypeImage from "../assets/images/Screenshot 2025-03-25 220100.png";
+// Import your airbnb image similarly if you have one
 
 const Project = () => {
   const projects = [
@@ -8,7 +12,7 @@ const Project = () => {
       description:
         "A food recipe website for travelers exploring regional cuisines and popular dishes.",
       techStack: ["HTML", "CSS", "JavaScript", "Firebase"],
-      image: "src/assets/images/Screenshot 2024-12-29 131047.png",
+      image: cookbookImage, // Use imported image
       demoLink: "https://speedotype04052005.web.app/",
       repoLink: "https://github.com//project1",
       accentColor: "#FF9E5E" // Orange accent
@@ -18,7 +22,7 @@ const Project = () => {
       description:
         "An engaging platform to test and boost your typing speed with real-time tracking.",
       techStack: ["React", "JavaScript", "CSS", "Framer Motion"],
-      image: "src/assets/images/Screenshot 2025-03-25 220100.png",
+      image: speedoTypeImage, // Use imported image
       demoLink: "https://speedotype04052005.web.app/",
       repoLink: "https://github.com/yourusername/project2",
       accentColor: "#5E8BFF" // Blue accent
@@ -26,9 +30,9 @@ const Project = () => {
     {
       title: "AirBnB",
       description:
-        "A plaform where you can book stay locations",
+        "A platform where you can book stay locations",
       techStack: ["ejs", "JavaScript", "tailwind", "Express js"],
-      image: "src/assets/images/Screenshot 2025-03-25 220100.png",
+      image: speedoTypeImage, // Update this with your airbnb image import
       demoLink: "https://speedotype04052005.web.app/",
       repoLink: "https://github.com/yourusername/project2",
       accentColor: "#34D399 " // Blue accent

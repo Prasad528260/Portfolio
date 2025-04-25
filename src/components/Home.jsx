@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import profileImage from "../assets/images/image1.jpg";
 
 function Home() {
   const [displayText, setDisplayText] = useState("");
@@ -43,10 +44,9 @@ function Home() {
 
       <div className="home-container">
         {/* Left column: Image */}
- 
         <div className="home-image">
           <div className="image-wrapper">
-            <img src="./image1.jpg" alt="Prasad Subhedar" />
+            <img src={profileImage} alt="Prasad Subhedar" />
             <div className="image-overlay">
               <div className="overlay-content">
                 <span className="overlay-text">Full Stack Developer</span>
