@@ -293,6 +293,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  scroll-margin-top: 2rem;
 }
 
 .profiles-title {
@@ -553,4 +554,8 @@
 }
 .home-image:hover .overlay-text:nth-child(3) {
   transition-delay: 0.4s;
+}
+
+html {
+  scroll-behavior: smooth;
 }

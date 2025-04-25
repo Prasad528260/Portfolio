@@ -7,6 +7,13 @@ function Home() {
   const [displayText, setDisplayText] = useState("");
   const fullText = "Hello! I'm Prasad Subhedar";
   const [showCursor, setShowCursor] = useState(true);
+  const scrollToProfiles = (e) => {
+    e.preventDefault();
+    const profilesSection = document.getElementById('profiles');
+    if (profilesSection) {
+      profilesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     let i = 0;
@@ -89,7 +96,7 @@ function Home() {
                 </svg>
               </button>
             </Link>
-            <a href="#profiles" className="secondary-btn">
+            <a href="#profiles" className="secondary-btn" onClick={scrollToProfiles}>
               My Coding Profiles ↓
             </a>
           </div>
