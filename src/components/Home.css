@@ -1,0 +1,556 @@
+/* Home.css */
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css');
+
+/* Dark Background */
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0a0a0a;
+  color: white;
+  padding: 40px 20px;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Particles Background */
+.particles-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(100, 149, 237, 0.7);
+  border-radius: 50%;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Main container */
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  gap: 80px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  padding: 40px 0;
+}
+
+/* Image section */
+.home-image {
+  position: relative;
+  max-width: 450px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 123, 255, 0.25);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.home-image:hover .image-wrapper {
+  transform: perspective(1000px) rotateY(0deg);
+  box-shadow: 0 25px 50px -12px rgba(0, 123, 255, 0.4);
+}
+
+.home-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(255, 99, 71, 0.3));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.overlay-content {
+  transform: translateY(20px);
+  transition: transform 0.5s ease;
+}
+
+.overlay-text {
+  display: block;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.home-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.home-image:hover .overlay-content {
+  transform: translateY(0);
+}
+
+.home-image:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-image:hover .overlay-text:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.home-image:hover .overlay-text:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.home-image:hover .overlay-text:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+/* Text section */
+.home-text {
+  max-width: 600px;
+  text-align: left;
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px;
+  min-height: 80px;
+  position: relative;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #ffffff, #c9d6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cursor {
+  position: relative;
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: #007bff;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  line-height: 1.8;
+  margin: 20px 0 30px;
+  font-weight: 400;
+}
+
+/* Button styling */
+.button-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.contact-btn {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #00bfff, #007bff);
+}
+
+.contact-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-btn:hover svg {
+  transform: translateX(3px);
+}
+
+.secondary-btn {
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: transparent;
+  color: #b0b0b0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.secondary-btn:hover {
+  color: #ffffff;
+  border-color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Tech stack */
+.tech-stack {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.tech-stack span {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.tech-icons i {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons i:hover {
+  transform: translateY(-5px);
+}
+
+/* Profiles section */
+.profiles-section {
+  width: 100%;
+  max-width: 1400px;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.profiles-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.profiles-title span {
+  display: inline-block;
+}
+
+.profiles-title .highlight {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.profiles-subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.profiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.profile-card {
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 15px;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
+  border-color: rgba(0, 123, 255, 0.3);
+}
+
+.card-icon {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  margin: 10px 0 15px;
+  color: #ffffff;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.stats span {
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 20px;
+  color: #007bff;
+}
+
+.card-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+.card-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #00bfff, #007bff);
+}
+
+.card-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.card-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .home-text {
+    text-align: center;
+  }
+
+  .title {
+    justify-content: center;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    min-height: 70px;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .profiles-title {
+    font-size: 2.2rem;
+  }
+
+  .profiles-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+    min-height: 60px;
+  }
+
+  .contact-btn,
+  .card-btn {
+    padding: 14px 24px;
+    font-size: 0.9rem;
+  }
+
+  .profiles-title {
+    font-size: 1.8rem;
+  }
+
+  .profile-card {
+    padding: 0;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+}
+/* Updated CSS for the image overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.overlay-content {
+  transform: translateY(0);
+  transition: transform 0.5s ease;
+}
+
+.overlay-text {
+  display: block;
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding: 8px 15px;
+  background: rgba(0, 123, 255, 0.3);
+  border-left: 3px solid #007bff;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(2px);
+  border-radius: 0 4px 4px 0;
+}
+
+.home-image:hover .image-overlay {
+  opacity: 1;
+}
+
+.home-image:hover .overlay-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.home-image:hover .overlay-text:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.home-image:hover .overlay-text:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.home-image:hover .overlay-text:nth-child(3) {
+  transition-delay: 0.4s;
+}

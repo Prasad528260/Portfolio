@@ -1,0 +1,106 @@
+/* Navbar.css */
+
+/* Global Navbar Styling */
+.navbar {
+  background-color: #191919; /* Dark background matching the page */
+  padding: 20px 0;
+  position: fixed; /* Keeps navbar at the top */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's above all other content */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  max-width: 1200px; /* Maximum width to center the navbar */
+  margin: 0 auto; /* Center navbar content */
+  padding: 0 20px;
+}
+
+.navbar-logo a {
+  color: #fff; /* White color for the portfolio text */
+  font-size: 1.8rem; /* Larger font for logo */
+  font-weight: 700;
+  text-decoration: none; /* Remove underline from the logo */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navbar Links List */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between the links */
+  margin: 0;
+  position: relative;
+}
+
+/* Navbar Links Styling */
+.navbar-links li {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-links a {
+  color: #fff; /* White color for links */
+  font-size: 1.1rem;
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  padding: 8px 10px; /* Add padding to links for better spacing */
+  transition: color 0.3s ease; /* Smooth color transition */
+  position: relative;
+}
+
+/* Creating the underline effect with white color */
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #fff; /* White underline color */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease; /* Smooth transition of underline */
+}
+
+/* On hover, expand the underline */
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* On active (when clicked), underline should also expand smoothly */
+.navbar-links a:focus::after, .navbar-links a:active::after {
+  width: 100%;
+}
+
+/* Active link styles: background color white and text color dark */
+.navbar-links .active {
+  background-color: #fff; /* White background on active link */
+  color: #333; /* Dark text for visibility */
+  border-radius: 5px; /* Optional: Rounded corners for the active link */
+}
+
+.navbar-links .active::after {
+  background-color: #fff; /* White underline remains for active link */
+  width: 100%;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; /* Stack logo and links on top of each other */
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px; /* Space between links when stacked */
+  }
+
+  .navbar-logo {
+    margin-bottom: 20px; /* Space between logo and links on mobile */
+  }
+}
