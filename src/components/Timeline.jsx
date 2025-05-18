@@ -3,7 +3,7 @@ import "./Timeline.css";
 
 const timelineData = [
   {
-    date: "2010",
+    date: "2021",
     title: "Tilak Nagar Vidyamandir High School",
     description: "Completed my schooling with a focus on science and mathematics.",
     position: "left",
@@ -11,7 +11,7 @@ const timelineData = [
     icon: "🏫",
   },
   {
-    date: "2016",
+    date: "2023",
     title: "Royal International College",
     description: "Pursued my higher secondary education specializing in science.",
     position: "right",
@@ -19,7 +19,7 @@ const timelineData = [
     icon: "🎓",
   },
   {
-    date: "2020",
+    date: "2023-2027",
     title: "Don Bosco Institute of Technology",
     description: "Graduated with a Bachelor's degree in Computer Science and Engineering.",
     position: "left",
